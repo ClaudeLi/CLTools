@@ -37,10 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		20AD502932DA9A114F8AEE9E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		20AD502932DA9A114F8AEE9E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		32F5C342789A677A9340AF24 /* Pods-CLTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLTools_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLTools_Tests/Pods-CLTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F989F1376CE33BB06688DB7 /* Pods-CLTools_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLTools_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLTools_Tests/Pods-CLTools_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		424700D75C9A53C44B71848D /* CLTools.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CLTools.podspec; path = ../CLTools.podspec; sourceTree = "<group>"; };
+		424700D75C9A53C44B71848D /* CLTools.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CLTools.podspec; path = ../CLTools.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58A195388D20070C39A /* CLTools_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLTools_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,7 +63,7 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		834A77E91EFA4960D9730BB0 /* Pods-CLTools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLTools_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLTools_Example/Pods-CLTools_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D30AE54D80D7A39BA580241F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D30AE54D80D7A39BA580241F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DF1019A7B8403CBAA82E0C35 /* Pods_CLTools_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLTools_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28DD11068A415FA76220859 /* Pods_CLTools_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLTools_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F2973F9932F83D365E2DD /* Pods-CLTools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLTools_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLTools_Example/Pods-CLTools_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -488,6 +488,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLTools/CLTools-Prefix.pch";
 				INFOPLIST_FILE = "CLTools/CLTools-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +504,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLTools/CLTools-Prefix.pch";
 				INFOPLIST_FILE = "CLTools/CLTools-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -22,7 +22,7 @@ pod 'CLTools'
 
 ## Author
 
-claudeli@yeah.net, youngli@tiao-tiao.com
+claudeli@yeah.net
 
 ## License
 
