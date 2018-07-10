@@ -29,7 +29,7 @@
 }
 
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString{
-    if ([NSString isNilOrEmpty:jsonString]) {
+    if ([NSString isNilOrEmptyString:jsonString]) {
         return nil;
     }
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];

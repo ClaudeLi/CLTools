@@ -19,6 +19,8 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor randomColor];
+    UUIDKeychainKey();
+    NSLog(@"%@", UUIDKeychainKey());
 }
 
 - (void)didReceiveMemoryWarning

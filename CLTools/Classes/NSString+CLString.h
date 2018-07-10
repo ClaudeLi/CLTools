@@ -13,7 +13,8 @@
 /**
  判断字符串是否为空
  */
-+ (BOOL)isNilOrEmpty:(NSString *)string;
+- (BOOL)isNilOrEmpty;
++ (BOOL)isNilOrEmptyString:(NSString *)string;
 
 /**
  object转json格式字符串
@@ -39,31 +40,5 @@
  字符串转数组, separate: 分割符
  */
 - (NSArray *)toArrayWithSeparate:(NSString *)separate;
-
-#pragma mark -
-#pragma mark -- 钥匙串操作 --
-
-/**
- 保存到钥匙串
-
- @param sValue  value
- @param sKey    key
- */
-+ (void)saveKeychainValue:(NSString *)sValue key:(NSString *)sKey;
-
-/**
- 根据key读取钥匙串中的value
-
- @param sKey key
- @return     value
- */
-+ (NSString *)readKeychainValue:(NSString *)sKey;
-
-/**
- 删除钥匙串中对应的key-value
-
- @param sKey key
- */
-+ (void)deleteKeychainValue:(NSString *)sKey;
 
 @end

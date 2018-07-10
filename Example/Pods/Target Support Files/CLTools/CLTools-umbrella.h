@@ -14,6 +14,7 @@
 #import "NSDictionary+CLDictionary.h"
 #import "NSString+CLString.h"
 #import "UIColor+CLColor.h"
+#import "UIDevice+CLDevice.h"
 #import "UIView+CLView.h"
 
 FOUNDATION_EXPORT double CLToolsVersionNumber;
