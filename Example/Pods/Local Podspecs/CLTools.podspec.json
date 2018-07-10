@@ -1,0 +1,22 @@
+{
+  "name": "CLTools",
+  "version": "0.1.0",
+  "summary": "A short description of CLTools.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/claudeli@yeah.net/CLTools",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "claudeli@yeah.net": "youngli@tiao-tiao.com"
+  },
+  "source": {
+    "git": "https://github.com/claudeli@yeah.net/CLTools.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CLTools/Classes/**/*"
+}

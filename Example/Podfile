@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CLTools_Example' do
+  pod 'CLTools', :path => '../'
+
+  target 'CLTools_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
