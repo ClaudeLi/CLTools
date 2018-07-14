@@ -11,34 +11,44 @@
 @interface NSString (CLString)
 
 /**
- 判断字符串是否为空
+ *  判断字符串是否为空
  */
 - (BOOL)isNilOrEmpty;
 + (BOOL)isNilOrEmptyString:(NSString *)string;
 
 /**
- object转json格式字符串
+ *  object转json格式字符串
  */
 + (NSString*)jsonStringWithObject:(id)object;
 
 /**
- 去除 " "、"\n"格式
+ *  去除 " "、"\n"格式
  */
 + (NSString *)jsonStringDelFormatWithObject:(id)object;
 
 /**
- js交互, 特殊字符处理 替换'->\\'
+ *  js交互, 特殊字符处理 替换'->\\'
  */
 + (NSString *)jsonStringForJSWithObject:(id)object;
 
 /**
- 数组转字符串, connector: 连接符
+ *  数组转字符串, connector: 连接符
  */
 + (NSString *)stringWithArray:(NSArray *)array connector:(NSString *)connector;
 
 /**
- 字符串转数组, separate: 分割符
+ *  字符串转数组, separate: 分割符
  */
 - (NSArray *)toArrayWithSeparate:(NSString *)separate;
+
+/**
+ *  URLEncode
+ */
+- (NSString *)URLEncodedString;
+
+/**
+ *  URLDecode
+ */
+- (NSString *)URLDecodedString;
 
 @end

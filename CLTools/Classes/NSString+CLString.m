@@ -77,12 +77,52 @@
     return mutStr;
 }
 
+/**
+ *  数组转字符串, connector: 连接符
+ */
 + (NSString *)stringWithArray:(NSArray *)array connector:(NSString *)connector{
     return [array componentsJoinedByString:connector];
 }
 
+/**
+ *  字符串转数组, separate: 分割符
+ */
 - (NSArray *)toArrayWithSeparate:(NSString *)separate{
     return [self componentsSeparatedByString:separate];
+}
+
+/**
+ *  URLEncode
+ */
+- (NSString *)URLEncodedString
+{
+    // CharactersToBeEscaped = @":/?&=;+!@#$()~',*";
+    // CharactersToLeaveUnescaped = @"[].";
+    
+    NSString *unencodedString = self;
+    NSString *encodedString = (NSString *)
+    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                              (CFStringRef)unencodedString,
+                                                              NULL,
+                                                              (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                              kCFStringEncodingUTF8));
+    
+    return encodedString;
+}
+
+/**
+ *  URLDecode
+ */
+-(NSString *)URLDecodedString
+{
+    //NSString *decodedString = [encodedString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding ];
+    
+    NSString *encodedString = self;
+    NSString *decodedString  = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
+                                                                                                                     (__bridge CFStringRef)encodedString,
+                                                                                                                     CFSTR(""),
+                                                                                                                     CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+    return decodedString;
 }
 
 @end
