@@ -13,7 +13,7 @@
 /**
  *  判断字符串是否为空
  */
-+ (BOOL)isNilOrEmpty:(NSString *)string;
++ (BOOL)isNilOrEmptyString:(NSString *)string;
 
 /**
  *  object转json格式字符串

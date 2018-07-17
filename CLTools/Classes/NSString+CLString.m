@@ -10,7 +10,7 @@
 
 @implementation NSString (CLString)
 
-+ (BOOL)isNilOrEmpty:(NSString *)string{
++ (BOOL)isNilOrEmptyString:(NSString *)string{
     if(string==nil||string==NULL||[string isEqual:@"null"]||[string isEqual:[NSNull null]]||[string isKindOfClass:[NSNull class]]){
         return YES;
     }
