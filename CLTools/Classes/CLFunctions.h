@@ -7,6 +7,8 @@
 
 #ifndef CLFunctions_h
 #define CLFunctions_h
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**
  Synthsize a weak or strong reference.
