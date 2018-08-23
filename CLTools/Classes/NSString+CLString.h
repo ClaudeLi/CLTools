@@ -8,6 +8,58 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 目录路径
+ 
+ @param dir 目录
+ @return path string
+ */
+static inline NSString *NSPathAtDir(NSSearchPathDirectory dir){
+    return [NSSearchPathForDirectoriesInDomains(dir, NSUserDomainMask, YES) firstObject];
+}
+
+/**
+ Document目录路径
+ 
+ @return path string
+ */
+static inline NSString *NSDocumentDirPath(void){
+    static NSString *document;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        document = NSPathAtDir(NSDocumentDirectory);
+    });
+    return document;
+}
+
+/**
+ Library目录路径
+ 
+ @return path string
+ */
+static inline NSString *NSLibraryDirPath(void){
+    static NSString *library;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        library = NSPathAtDir(NSLibraryDirectory);
+    });
+    return library;
+}
+
+/**
+ Caches目录路径
+ 
+ @return path string
+ */
+static inline NSString *NSCachesDirPath(void){
+    static NSString *caches;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        caches = NSPathAtDir(NSCachesDirectory);
+    });
+    return caches;
+}
+
 @interface NSString (CLString)
 
 /**

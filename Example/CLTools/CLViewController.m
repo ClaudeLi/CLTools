@@ -21,6 +21,8 @@
     self.view.backgroundColor = [UIColor randomColor];
     UUIDKeychainKey();
     NSLog(@"%@", UUIDKeychainKey());
+    NSLog(@"%@", NSDocumentDirPath());
+    NSRemoveFilesAtDirectory(NSTemporaryDirectory(), @"pdf");
 }
 
 - (void)didReceiveMemoryWarning
