@@ -270,7 +270,7 @@ NSString *UUIDKeychainKey(){
     [invocation invoke];
 }
 
-+ (BOOL)isOrientationLandscape{
++ (BOOL)isLandscape{
     //if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
     if (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)) {
         return YES;

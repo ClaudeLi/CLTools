@@ -51,7 +51,7 @@ FOUNDATION_EXTERN NSString *UUIDKeychainKey(void);
  @param sKey key
  @return     value
  */
-+ (NSString *)readKeychainValue:(NSString *)sKey;
++ (nullable NSString *)readKeychainValue:(NSString *)sKey;
 
 /**
  删除钥匙串中对应的key-value
@@ -74,6 +74,6 @@ FOUNDATION_EXTERN NSString *UUIDKeychainKey(void);
  *
  *  @return 布尔值
  */
-+ (BOOL)isOrientationLandscape;
++ (BOOL)isLandscape;
 
 @end
