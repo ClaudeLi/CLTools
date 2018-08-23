@@ -26,6 +26,6 @@ FOUNDATION_EXPORT const unsigned char CLToolsVersionString[];
 #import "UIColor+CLColor.h"
 #import "UIView+CLView.h"
 #import "UIDevice+CLDevice.h"
-#import "CLTools/CLFunctions.h"
+#import "CLFunctions.h"
 
 #endif /* CLTools_h */

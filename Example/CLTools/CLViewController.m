@@ -22,7 +22,10 @@
     UUIDKeychainKey();
     NSLog(@"%@", UUIDKeychainKey());
     NSLog(@"%@", NSDocumentDirPath());
-    NSRemoveFilesAtDirectory(NSTemporaryDirectory(), @"pdf");
+    NSRemoveFilesAtDirectory(NSTemporaryDirectory(), @"mp4");
+    OpenURL(@"weixin://", ^(BOOL success) {
+        
+    });
 }
 
 - (void)didReceiveMemoryWarning
