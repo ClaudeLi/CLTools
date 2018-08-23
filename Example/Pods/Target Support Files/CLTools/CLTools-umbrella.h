@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "CLFunctions.h"
 #import "CLTools.h"
 #import "NSDictionary+CLDictionary.h"
 #import "NSString+CLString.h"
