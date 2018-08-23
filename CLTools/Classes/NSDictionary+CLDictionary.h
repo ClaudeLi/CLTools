@@ -14,16 +14,16 @@
 + (NSDictionary *)dictionaryWithQueryString:(NSString *)string;
 
 // json字符串转字典
-+ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
++ (nullable NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 
 // 转json格式字符串
-+ (NSString*)toJsonString;
++ (nullable NSString*)toJsonString;
 
 // 转json格式字符串, 去除格式化
-+ (NSString *)toJsonStringDelFormat;
++ (nullable NSString *)toJsonStringDelFormat;
 
 // 转json格式字符串, js交互处理特殊字符"'"
-+ (NSString *)toJSJsonString;
++ (nullable NSString *)toJSJsonString;
 
 
 @end
