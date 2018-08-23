@@ -201,7 +201,10 @@ static inline void OpenURL(NSString *URLString, void(^__nullable completionHandl
            completionHandler:completionHandler];
     }else{
         if ([application canOpenURL:URL]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
             [application openURL:URL];
+#pragma clang diagnostic pop
             if (completionHandler) {
                 completionHandler(YES);
             }
