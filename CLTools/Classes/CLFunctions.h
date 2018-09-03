@@ -13,6 +13,28 @@
 #define KScreenHeight   [UIScreen mainScreen].bounds.size.height
 
 /**
+ 屏幕安全区
+
+ @return UIEdgeInsets
+ */
+static inline UIEdgeInsets KSafeInsets(void) {
+    return  cl_safeAreaInset([UIApplication sharedApplication].keyWindow);
+}
+
+/**
+ 视图安全区
+
+ @param view 指定视图
+ @return UIEdgeInsets
+ */
+static inline UIEdgeInsets cl_safeAreaInset(UIView *view) {
+    if (@available(iOS 11.0, *)) {
+        return view.safeAreaInsets;
+    }
+    return UIEdgeInsetsZero;
+}
+
+/**
  Synthsize a weak or strong reference.
  
  Example:
