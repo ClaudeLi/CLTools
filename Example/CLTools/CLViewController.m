@@ -25,7 +25,7 @@
     NSRemoveFilesAtDirectory(NSTemporaryDirectory(), @"mp4");
     OpenURL(@"weixin://", ^(BOOL success) {
         
-    });
+    });    
 }
 
 - (void)didReceiveMemoryWarning

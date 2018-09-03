@@ -13,15 +13,6 @@
 #define KScreenHeight   [UIScreen mainScreen].bounds.size.height
 
 /**
- 屏幕安全区
-
- @return UIEdgeInsets
- */
-static inline UIEdgeInsets KSafeInsets(void) {
-    return  cl_safeAreaInset([UIApplication sharedApplication].keyWindow);
-}
-
-/**
  视图安全区
 
  @param view 指定视图
@@ -32,6 +23,15 @@ static inline UIEdgeInsets cl_safeAreaInset(UIView *view) {
         return view.safeAreaInsets;
     }
     return UIEdgeInsetsZero;
+}
+
+/**
+ 屏幕安全区
+ 
+ @return UIEdgeInsets
+ */
+static inline UIEdgeInsets KSafeInsets(void) {
+    return cl_safeAreaInset(UIApplication.sharedApplication.keyWindow);
 }
 
 /**
