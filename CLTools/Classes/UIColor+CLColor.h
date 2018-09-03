@@ -10,13 +10,10 @@
 
 @interface UIColor (CLColor)
 
+FOUNDATION_EXTERN UIColor *rgba(CGFloat r, CGFloat g, CGFloat b, CGFloat a);
+FOUNDATION_EXTERN UIColor *rgbaDP3(CGFloat r, CGFloat g, CGFloat b, CGFloat a) NS_AVAILABLE_IOS(10_0);
+
 // 随机色
 +(UIColor *)randomColor;
-
-// RGBA
-+(UIColor *)colorWithR:(CGFloat)r g:(CGFloat)g b:(CGFloat)b a:(CGFloat)a;
-
-// DisplayP3 RGBA >iOS10.0
-+(UIColor *)colorWithDP3R:(CGFloat)r g:(CGFloat)g b:(CGFloat)b a:(CGFloat)a NS_AVAILABLE_IOS(10_0);
 
 @end

@@ -8,6 +8,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define KBounds         [UIScreen mainScreen].bounds
+#define KScreenWidth    [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight   [UIScreen mainScreen].bounds.size.height
+
 /**
  Synthsize a weak or strong reference.
  
