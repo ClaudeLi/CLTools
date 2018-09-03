@@ -60,6 +60,24 @@ FOUNDATION_EXTERN NSString * _Nonnull UUIDKeychainKey(void);
  */
 + (void)deleteKeychainValue:(NSString *_Nullable)sKey;
 
+#pragma mark - save to Ablum
+/**
+ 保存图片至相册
+
+ @param image 图片
+ @param completion completion
+ */
++ (void)saveImageToAblum:(nullable UIImage *)image
+              completion:(nullable void (^)(BOOL success, id _Nullable asset))completion;
+
+/**
+ 保存文件至相册
+ 
+ @param url 文件地址
+ @param completion completion
+ */
++ (void)saveFileToAblumWithURL:(nullable NSURL *)url
+                    completion:(nullable void (^)(BOOL success, id _Nullable asset))completion;
 
 #pragma mark - Orientation
 /**

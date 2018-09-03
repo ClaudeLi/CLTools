@@ -16,6 +16,7 @@
 #include <sys/sysctl.h>
 #include <net/if.h>
 #include <net/if_dl.h>
+#import <Photos/Photos.h>
 
 NSString *UUIDKeychainKey(){
     static NSString *uuidKey;
@@ -265,6 +266,110 @@ NSString *UUIDKeychainKey(){
     }
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:sKey];
     SecItemDelete((__bridge CFDictionaryRef)keychainQuery);
+}
+
+
+#pragma mark - 保存图片到系统相册
++ (void)saveImageToAblum:(UIImage *)image completion:(void (^)(BOOL, id))completion{
+    if (!image) {
+        if (completion) completion(NO, nil);
+        return;
+    }
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    if (status == PHAuthorizationStatusDenied) {
+        if (completion) completion(NO, nil);
+    } else if (status == PHAuthorizationStatusRestricted) {
+        if (completion) completion(NO, nil);
+    } else {
+        __block PHObjectPlaceholder *placeholderAsset=nil;
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            PHAssetChangeRequest *newAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromImage:image];
+            placeholderAsset = newAssetRequest.placeholderForCreatedAsset;
+        } completionHandler:^(BOOL success, NSError * _Nullable error) {
+            if (!success) {
+                if (completion) completion(NO, nil);
+                return;
+            }
+            PHAsset *asset = [self getAssetFromlocalIdentifier:placeholderAsset.localIdentifier];
+            PHAssetCollection *desCollection = [self getDestinationCollection];
+            if (!desCollection) completion(NO, nil);
+            
+            [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+                [[PHAssetCollectionChangeRequest changeRequestForAssetCollection:desCollection] addAssets:@[asset]];
+            } completionHandler:^(BOOL success, NSError * _Nullable error) {
+                if (completion) completion(success, asset);
+            }];
+        }];
+    }
+}
+
++ (void)saveFileToAblumWithURL:(NSURL *)url completion:(void (^)(BOOL, id))completion{
+    if (!url) {
+        if (completion) completion(NO, nil);
+        return;
+    }
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    if (status == PHAuthorizationStatusDenied) {
+        if (completion) completion(NO, nil);
+    } else if (status == PHAuthorizationStatusRestricted) {
+        if (completion) completion(NO, nil);
+    } else {
+        __block PHObjectPlaceholder *placeholderAsset=nil;
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            PHAssetChangeRequest *newAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:url];
+            placeholderAsset = newAssetRequest.placeholderForCreatedAsset;
+        } completionHandler:^(BOOL success, NSError * _Nullable error) {
+            if (!success) {
+                if (completion) completion(NO, nil);
+                return;
+            }
+            PHAsset *asset = [self getAssetFromlocalIdentifier:placeholderAsset.localIdentifier];
+            PHAssetCollection *desCollection = [self getDestinationCollection];
+            if (!desCollection) completion(NO, nil);
+            
+            [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+                if (asset) {
+                    [[PHAssetCollectionChangeRequest changeRequestForAssetCollection:desCollection] addAssets:@[asset]];
+                }
+            } completionHandler:^(BOOL success, NSError * _Nullable error) {
+                if (completion) completion(success, asset);
+            }];
+        }];
+    }
+}
+
++ (PHAsset *)getAssetFromlocalIdentifier:(NSString *)localIdentifier{
+    if(localIdentifier == nil){
+        NSLog(@"Cannot get asset from localID because it is nil");
+        return nil;
+    }
+    PHFetchResult *result = [PHAsset fetchAssetsWithLocalIdentifiers:@[localIdentifier] options:nil];
+    if(result.count){
+        return result[0];
+    }
+    return nil;
+}
+
+// 获取自定义相册
++ (PHAssetCollection *)getDestinationCollection{
+    // 找是否已经创建自定义相册
+    PHFetchResult<PHAssetCollection *> *collectionResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    for (PHAssetCollection *collection in collectionResult) {
+        if ([collection.localizedTitle isEqualToString:self.appName]) {
+            return collection;
+        }
+    }
+    // 新建自定义相册
+    __block NSString *collectionId = nil;
+    NSError *error = nil;
+    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+        collectionId = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:[UIDevice appName]].placeholderForCreatedAssetCollection.localIdentifier;
+    } error:&error];
+    if (error) {
+        NSLog(@"Creat '%@' Ablum Error：%@", self.appName, error.localizedDescription);
+        return nil;
+    }
+    return [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[collectionId] options:nil].lastObject;
 }
 
 #pragma mark -
