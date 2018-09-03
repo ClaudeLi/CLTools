@@ -7,28 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01FFBC556FCACEB88057B3A3BA48FE4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		02F81780A003A9E652A12F7560C497F1 /* CLTools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E869D75BC726644CE8F8FAB04E651644 /* CLTools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07860FA8EA407F1885743CB65FA3642E /* UIDevice+CLDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C5370F4A390071D62B528C37FAE1016A /* UIDevice+CLDevice.m */; };
-		16422154544AFE8E627D154303095986 /* NSObject+CLFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 917F3DCE1E9930622AB518B690B9466F /* NSObject+CLFunc.m */; };
-		1CFD351CAC5A683FFB59514CED519332 /* UIColor+CLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D0BDB996ED4123521C35721C6644F0 /* UIColor+CLColor.m */; };
+		024697520844A0B2175D9746699D5F3C /* UIImage+CLImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A0A217498942B9846D2541D553B554C6 /* UIImage+CLImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		170A1536F38656A452F29238A88D80A0 /* UIColor+CLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 165A819A5176599E7294843A94EA7DFB /* UIColor+CLColor.m */; };
 		1D28414EB6F4FBEF2FC15B2159601FA6 /* Pods-CLTools_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2A6FCFBEEAB321A0D6CFC1401684EC /* Pods-CLTools_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		208D7F1D8F6AD068B8FBDB2EA7D851F9 /* UIColor+CLColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B28D91C4DA8D48B471580BA03A14041 /* UIColor+CLColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		270CFA83804D2142704D8DAD391C71A5 /* Pods-CLTools_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED3213EA04453B159DC9D8972FCD5E54 /* Pods-CLTools_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C1CE5BFE323D6AF1A57F415CF3135E4 /* NSString+CLString.h in Headers */ = {isa = PBXBuildFile; fileRef = 65740E67E4341961F6849D2E77ACF2AB /* NSString+CLString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BC76CABBD1BB845D3825CCBB7C9514D /* CLTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602D98D1886507624791B9DDECFB6E4 /* CLTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		489717E4EA23BFBD337E7DE3D1875FE1 /* NSDictionary+CLDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 57617BD088D39A162F81C1FCBCFB6BE5 /* NSDictionary+CLDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D1671FAAEA88509641EBDD4AE14E5A1 /* UIColor+CLColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A62F9B56CFB2A054EC25266C0A4F28F /* UIColor+CLColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62A8A4D3C6BD5742944E11121DD77D02 /* UIView+CLView.h in Headers */ = {isa = PBXBuildFile; fileRef = B02F5F225D3026554DC759A826FE3C45 /* UIView+CLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68B1F00D65F4AACFF8F704D5C82C5FCB /* CLTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB52E858CEB83B864E9DD4B15BE35289 /* CLTools-dummy.m */; };
-		70921F93D2D5BAA88C5D98E804ADB65C /* NSObject+CLFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = 9765DD80638E5D5FA58A698F5F363637 /* NSObject+CLFunc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33B19E242798DDA804BAD0C5B6D68ACE /* NSString+CLString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2F9AB41C468EDCF5AD6B911EEFAE8 /* NSString+CLString.m */; };
+		346F97959DA443DE666396C4EC667603 /* CLTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D75F40C91B00585335B60226C73BD7B /* CLTools-dummy.m */; };
+		35ED8CB60D81B667A262C8A6DEE88346 /* CLFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7818E4D93E76AD0102BD8DEA92B96743 /* CLFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39F5D630C33D5EB1D1C4D505F0A81FBD /* NSString+CLString.h in Headers */ = {isa = PBXBuildFile; fileRef = EACFA14B39141A7E63AC16E095630C51 /* NSString+CLString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D98B64BA1EF73147BDD8F57F2245DBB /* UIDevice+CLDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3314D98E7F4098B7065A4FBABD7EC01F /* UIDevice+CLDevice.m */; };
+		5981FDD651A0D3EAD439FE42C21A7C79 /* UIImage+CLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BCF8C16E4D228BC7F913D33F553553 /* UIImage+CLImage.m */; };
+		6DA482A604C0F00F31B325B7F2FBB555 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		6F574CF729609F0E82FC015E24BADD11 /* CLTools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD4B04EA35A096EC155EA0AB87C3E6C9 /* CLTools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		890A5E28E74D7909E4AD34333151E61B /* Pods-CLTools_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD49EF036CFA232A6B0B440D672BCB0 /* Pods-CLTools_Tests-dummy.m */; };
-		CE3A8ADB5C9A7FB483374D38D6133F11 /* NSString+CLString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC9D63477777B2B140D0030B4EBAB6 /* NSString+CLString.m */; };
+		897633F6A056BAED059AEEFE50FB5D2B /* UIView+CLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19DC3C5CDC0A66BA150EBBAEE7873E /* UIView+CLView.m */; };
+		ABB43F201374F20F6A68E32840D24447 /* CLTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 591EAE76872663FDF23658A695070EB0 /* CLTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C243362A24C44D702D6B568D8B4F7F11 /* NSDictionary+CLDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 4344D0CBEB17D501A01ED329B1855359 /* NSDictionary+CLDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4DAD3FA25574A74A28C9262F545AD78 /* NSDictionary+CLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 98253E2F601B7F39DD53BB1D657505A3 /* NSDictionary+CLDictionary.m */; };
 		D5F6304379AF83E403A25B0BA04655ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		D9CC5F607FCD4547AEECD2665340083A /* UIDevice+CLDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41FF4A7037B18907D1BC3F6ED33470 /* UIDevice+CLDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE178903E2C1A5AF59CE29DA285C3330 /* Pods-CLTools_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF7D989B91C64DDAA8767F3182CC486 /* Pods-CLTools_Example-dummy.m */; };
-		E69C4AC1F8F3B081A8979E420B4D092B /* UIView+CLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702DF7EEC33641970A456EB77547AB31 /* UIView+CLView.m */; };
-		EB16E2DC948DAE77A96BB7D347325759 /* NSDictionary+CLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8915E9AD68AC6FF556E06728B999BB /* NSDictionary+CLDictionary.m */; };
-		F49F588934B7E3F80D249FED1D0DDC45 /* UIDevice+CLDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 762B01533EDB13683A9E99051855C6FA /* UIDevice+CLDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4C3F618ACBC3D8ED4EF37BE7DBA0E99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		F5FA2DF9F17989F6422E1CF12A5D0038 /* UIView+CLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 40BCAD6354ACCCAEA5E628C0C59FC4B4 /* UIView+CLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C506A9FF22C4321436B79294D4BFB00D;
+			remoteGlobalIDString = 349C649A7F528A5F787B8F4BA86B23EB;
 			remoteInfo = CLTools;
 		};
 		1F18F9863A651677F675F2DB4A81A36D /* PBXContainerItemProxy */ = {
@@ -49,64 +50,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05D0BDB996ED4123521C35721C6644F0 /* UIColor+CLColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CLColor.m"; path = "CLTools/Classes/UIColor+CLColor.m"; sourceTree = "<group>"; };
-		079BCE7607A2EB779F68B52265044883 /* CLTools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CLTools.modulemap; sourceTree = "<group>"; };
-		0BFF92E05C62B76D536EB6AEFAD6522D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BE2F9AB41C468EDCF5AD6B911EEFAE8 /* NSString+CLString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+CLString.m"; path = "CLTools/Classes/NSString+CLString.m"; sourceTree = "<group>"; };
 		12E08A77D138D844483859D3AF196655 /* CLTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CLTools.framework; path = CLTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A8915E9AD68AC6FF556E06728B999BB /* NSDictionary+CLDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CLDictionary.m"; path = "CLTools/Classes/NSDictionary+CLDictionary.m"; sourceTree = "<group>"; };
+		165A819A5176599E7294843A94EA7DFB /* UIColor+CLColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CLColor.m"; path = "CLTools/Classes/UIColor+CLColor.m"; sourceTree = "<group>"; };
 		21A6BA8D12F00A6E20A99A376B57E072 /* Pods-CLTools_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CLTools_Example.modulemap"; sourceTree = "<group>"; };
+		3314D98E7F4098B7065A4FBABD7EC01F /* UIDevice+CLDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+CLDevice.m"; path = "CLTools/Classes/UIDevice+CLDevice.m"; sourceTree = "<group>"; };
 		38AECF1BC788ECDA215118BF1337012A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38BD12B221FE51320C5A828493FB861A /* Pods-CLTools_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLTools_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3C06DE71DC536DCE97CB665CB5663C65 /* CLTools.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLTools.xcconfig; sourceTree = "<group>"; };
 		3C2A6FCFBEEAB321A0D6CFC1401684EC /* Pods-CLTools_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLTools_Tests-umbrella.h"; sourceTree = "<group>"; };
-		41A62C11B1642FCDECDCAEB3EBB05C4B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		4602D98D1886507624791B9DDECFB6E4 /* CLTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLTools.h; path = CLTools/Classes/CLTools.h; sourceTree = "<group>"; };
+		40BCAD6354ACCCAEA5E628C0C59FC4B4 /* UIView+CLView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CLView.h"; path = "CLTools/Classes/UIView+CLView.h"; sourceTree = "<group>"; };
+		4344D0CBEB17D501A01ED329B1855359 /* NSDictionary+CLDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CLDictionary.h"; path = "CLTools/Classes/NSDictionary+CLDictionary.h"; sourceTree = "<group>"; };
 		4AD49EF036CFA232A6B0B440D672BCB0 /* Pods-CLTools_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLTools_Tests-dummy.m"; sourceTree = "<group>"; };
-		4C738149D6430F6818CAF508C3C47464 /* CLTools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CLTools.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		575F4C281127F27104DFF3F8DCA81BF1 /* Pods-CLTools_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CLTools_Tests.modulemap"; sourceTree = "<group>"; };
-		57617BD088D39A162F81C1FCBCFB6BE5 /* NSDictionary+CLDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CLDictionary.h"; path = "CLTools/Classes/NSDictionary+CLDictionary.h"; sourceTree = "<group>"; };
+		591EAE76872663FDF23658A695070EB0 /* CLTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLTools.h; path = CLTools/Classes/CLTools.h; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5A62F9B56CFB2A054EC25266C0A4F28F /* UIColor+CLColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+CLColor.h"; path = "CLTools/Classes/UIColor+CLColor.h"; sourceTree = "<group>"; };
+		5E2DC2C56658866539330FA170CA8AC2 /* CLTools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLTools-prefix.pch"; sourceTree = "<group>"; };
 		5EF0E6A889D28268C55CE37A9592E726 /* Pods-CLTools_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLTools_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		65740E67E4341961F6849D2E77ACF2AB /* NSString+CLString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+CLString.h"; path = "CLTools/Classes/NSString+CLString.h"; sourceTree = "<group>"; };
 		6B8910AA5B21B9204048B5785F4CFD76 /* Pods-CLTools_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLTools_Example-resources.sh"; sourceTree = "<group>"; };
+		6C19DC3C5CDC0A66BA150EBBAEE7873E /* UIView+CLView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CLView.m"; path = "CLTools/Classes/UIView+CLView.m"; sourceTree = "<group>"; };
+		6D75F40C91B00585335B60226C73BD7B /* CLTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLTools-dummy.m"; sourceTree = "<group>"; };
+		6DAFFA1F596862B6E2E82BBB62AF2517 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EF7D989B91C64DDAA8767F3182CC486 /* Pods-CLTools_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLTools_Example-dummy.m"; sourceTree = "<group>"; };
-		702DF7EEC33641970A456EB77547AB31 /* UIView+CLView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CLView.m"; path = "CLTools/Classes/UIView+CLView.m"; sourceTree = "<group>"; };
-		70B2F6BAABC3F7480CF6417D1A633ECA /* CLTools.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLTools.xcconfig; sourceTree = "<group>"; };
-		762B01533EDB13683A9E99051855C6FA /* UIDevice+CLDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+CLDevice.h"; path = "CLTools/Classes/UIDevice+CLDevice.h"; sourceTree = "<group>"; };
-		7AAC9D63477777B2B140D0030B4EBAB6 /* NSString+CLString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+CLString.m"; path = "CLTools/Classes/NSString+CLString.m"; sourceTree = "<group>"; };
-		7D2255EEE4199D2DF774791EC25F3830 /* CLTools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLTools-prefix.pch"; sourceTree = "<group>"; };
+		7818E4D93E76AD0102BD8DEA92B96743 /* CLFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLFunctions.h; path = CLTools/Classes/CLFunctions.h; sourceTree = "<group>"; };
+		7B28D91C4DA8D48B471580BA03A14041 /* UIColor+CLColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+CLColor.h"; path = "CLTools/Classes/UIColor+CLColor.h"; sourceTree = "<group>"; };
 		8148214E978A0BF329425F6344207D3B /* Pods-CLTools_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLTools_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8E903A52B4BA33C9BF6333AB589C6DE8 /* Pods-CLTools_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLTools_Tests-resources.sh"; sourceTree = "<group>"; };
 		8F6636663F3FE51B53F34F9333CEEF90 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		917F3DCE1E9930622AB518B690B9466F /* NSObject+CLFunc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+CLFunc.m"; path = "CLTools/Classes/NSObject+CLFunc.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		950063164B7F15BAA7FE513D40460AD6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9765DD80638E5D5FA58A698F5F363637 /* NSObject+CLFunc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+CLFunc.h"; path = "CLTools/Classes/NSObject+CLFunc.h"; sourceTree = "<group>"; };
+		94B469194104BC9B4172771BFCAD5B8F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		98253E2F601B7F39DD53BB1D657505A3 /* NSDictionary+CLDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CLDictionary.m"; path = "CLTools/Classes/NSDictionary+CLDictionary.m"; sourceTree = "<group>"; };
 		9EF7ADCFCA1B783856B5DF2FFD4DD9AA /* Pods_CLTools_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLTools_Tests.framework; path = "Pods-CLTools_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0A217498942B9846D2541D553B554C6 /* UIImage+CLImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CLImage.h"; path = "CLTools/Classes/UIImage+CLImage.h"; sourceTree = "<group>"; };
 		A4EC1524E297523135B03A9E89FEB9F2 /* Pods-CLTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A54C0BEFA544E29E2BE501B60F95DA25 /* CLTools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CLTools.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A57DF52B100493F29E8F7E4CDE16622D /* Pods-CLTools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLTools_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B02F5F225D3026554DC759A826FE3C45 /* UIView+CLView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CLView.h"; path = "CLTools/Classes/UIView+CLView.h"; sourceTree = "<group>"; };
+		AB41FF4A7037B18907D1BC3F6ED33470 /* UIDevice+CLDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+CLDevice.h"; path = "CLTools/Classes/UIDevice+CLDevice.h"; sourceTree = "<group>"; };
+		AD4B04EA35A096EC155EA0AB87C3E6C9 /* CLTools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLTools-umbrella.h"; sourceTree = "<group>"; };
+		B7BCF8C16E4D228BC7F913D33F553553 /* UIImage+CLImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CLImage.m"; path = "CLTools/Classes/UIImage+CLImage.m"; sourceTree = "<group>"; };
 		C1A9FEB6BB23DD3ED5E9EAAF76D2B580 /* Pods-CLTools_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLTools_Example-frameworks.sh"; sourceTree = "<group>"; };
-		C5370F4A390071D62B528C37FAE1016A /* UIDevice+CLDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+CLDevice.m"; path = "CLTools/Classes/UIDevice+CLDevice.m"; sourceTree = "<group>"; };
-		CB52E858CEB83B864E9DD4B15BE35289 /* CLTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLTools-dummy.m"; sourceTree = "<group>"; };
+		C2E8952E69787B0ED5E6847E9C996061 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		CB8BFDC0F74DFC4521043CA97A4E3CDA /* Pods-CLTools_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLTools_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D0E5513397639FAA91D1D264F33A4052 /* Pods_CLTools_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLTools_Example.framework; path = "Pods-CLTools_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B886981AE0D47A93EAD80E4A6140EF /* Pods-CLTools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLTools_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DD7BD41E6F0C185E7961637DCE0F44F9 /* Pods-CLTools_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLTools_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E869D75BC726644CE8F8FAB04E651644 /* CLTools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLTools-umbrella.h"; sourceTree = "<group>"; };
+		E0FD7497C507097B5715013EFF4217D5 /* CLTools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CLTools.modulemap; sourceTree = "<group>"; };
+		EACFA14B39141A7E63AC16E095630C51 /* NSString+CLString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+CLString.h"; path = "CLTools/Classes/NSString+CLString.h"; sourceTree = "<group>"; };
 		ED3213EA04453B159DC9D8972FCD5E54 /* Pods-CLTools_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLTools_Example-umbrella.h"; sourceTree = "<group>"; };
 		F94CC3DF59185AA1E590B340C0B63776 /* Pods-CLTools_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLTools_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		031742A03B5E9701ADD75B9434182CA7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01FFBC556FCACEB88057B3A3BA48FE4B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		85AB2CE8D9AB2CDBC3C79D3830C45A35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,15 +117,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6EA7653BCB4335D8F9F7525B0CD7F68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA482A604C0F00F31B325B7F2FBB555 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03DEADDAA8E071F2F1476C0673FEFCB9 /* Development Pods */ = {
+		07FC8B371AAA77382AC9E37CC288666E /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				E7A1A5AF0881B9FF137AC1704052339E /* CLTools */,
+				A54C0BEFA544E29E2BE501B60F95DA25 /* CLTools.podspec */,
+				C2E8952E69787B0ED5E6847E9C996061 /* LICENSE */,
+				94B469194104BC9B4172771BFCAD5B8F /* README.md */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		26E019C968A09C64BC59B6B13D7B4476 /* Targets Support Files */ = {
@@ -141,6 +145,30 @@
 				41211F7EA521B13FC6CC342112C1AE7C /* Pods-CLTools_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		29C9C963C4C9EBBF099F5465A1426FC3 /* CLTools */ = {
+			isa = PBXGroup;
+			children = (
+				7818E4D93E76AD0102BD8DEA92B96743 /* CLFunctions.h */,
+				591EAE76872663FDF23658A695070EB0 /* CLTools.h */,
+				4344D0CBEB17D501A01ED329B1855359 /* NSDictionary+CLDictionary.h */,
+				98253E2F601B7F39DD53BB1D657505A3 /* NSDictionary+CLDictionary.m */,
+				EACFA14B39141A7E63AC16E095630C51 /* NSString+CLString.h */,
+				0BE2F9AB41C468EDCF5AD6B911EEFAE8 /* NSString+CLString.m */,
+				7B28D91C4DA8D48B471580BA03A14041 /* UIColor+CLColor.h */,
+				165A819A5176599E7294843A94EA7DFB /* UIColor+CLColor.m */,
+				AB41FF4A7037B18907D1BC3F6ED33470 /* UIDevice+CLDevice.h */,
+				3314D98E7F4098B7065A4FBABD7EC01F /* UIDevice+CLDevice.m */,
+				A0A217498942B9846D2541D553B554C6 /* UIImage+CLImage.h */,
+				B7BCF8C16E4D228BC7F913D33F553553 /* UIImage+CLImage.m */,
+				40BCAD6354ACCCAEA5E628C0C59FC4B4 /* UIView+CLView.h */,
+				6C19DC3C5CDC0A66BA150EBBAEE7873E /* UIView+CLView.m */,
+				07FC8B371AAA77382AC9E37CC288666E /* Pod */,
+				A6F53599E7BB7EC71AD46146A74DFB96 /* Support Files */,
+			);
+			name = CLTools;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		41211F7EA521B13FC6CC342112C1AE7C /* Pods-CLTools_Tests */ = {
@@ -179,25 +207,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		720745C307B6EDF9B8F4DCF7C36258ED /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29C9C963C4C9EBBF099F5465A1426FC3 /* CLTools */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				03DEADDAA8E071F2F1476C0673FEFCB9 /* Development Pods */,
+				720745C307B6EDF9B8F4DCF7C36258ED /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				60B59133138F4EB1625F1FB2D6BCEC6F /* Products */,
 				26E019C968A09C64BC59B6B13D7B4476 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		7DEE7283752A7722EE03AFC313AF7208 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				4C738149D6430F6818CAF508C3C47464 /* CLTools.podspec */,
-				950063164B7F15BAA7FE513D40460AD6 /* LICENSE */,
-				41A62C11B1642FCDECDCAEB3EBB05C4B /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		9E65EA563BCB6C3AAC0FE35B84911338 /* Pods-CLTools_Example */ = {
@@ -218,6 +244,20 @@
 			path = "Target Support Files/Pods-CLTools_Example";
 			sourceTree = "<group>";
 		};
+		A6F53599E7BB7EC71AD46146A74DFB96 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0FD7497C507097B5715013EFF4217D5 /* CLTools.modulemap */,
+				3C06DE71DC536DCE97CB665CB5663C65 /* CLTools.xcconfig */,
+				6D75F40C91B00585335B60226C73BD7B /* CLTools-dummy.m */,
+				5E2DC2C56658866539330FA170CA8AC2 /* CLTools-prefix.pch */,
+				AD4B04EA35A096EC155EA0AB87C3E6C9 /* CLTools-umbrella.h */,
+				6DAFFA1F596862B6E2E82BBB62AF2517 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CLTools";
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,66 +266,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CBAD03A4DE946796BE2315E36335963B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				079BCE7607A2EB779F68B52265044883 /* CLTools.modulemap */,
-				70B2F6BAABC3F7480CF6417D1A633ECA /* CLTools.xcconfig */,
-				CB52E858CEB83B864E9DD4B15BE35289 /* CLTools-dummy.m */,
-				7D2255EEE4199D2DF774791EC25F3830 /* CLTools-prefix.pch */,
-				E869D75BC726644CE8F8FAB04E651644 /* CLTools-umbrella.h */,
-				0BFF92E05C62B76D536EB6AEFAD6522D /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CLTools";
-			sourceTree = "<group>";
-		};
-		E7A1A5AF0881B9FF137AC1704052339E /* CLTools */ = {
-			isa = PBXGroup;
-			children = (
-				4602D98D1886507624791B9DDECFB6E4 /* CLTools.h */,
-				57617BD088D39A162F81C1FCBCFB6BE5 /* NSDictionary+CLDictionary.h */,
-				1A8915E9AD68AC6FF556E06728B999BB /* NSDictionary+CLDictionary.m */,
-				9765DD80638E5D5FA58A698F5F363637 /* NSObject+CLFunc.h */,
-				917F3DCE1E9930622AB518B690B9466F /* NSObject+CLFunc.m */,
-				65740E67E4341961F6849D2E77ACF2AB /* NSString+CLString.h */,
-				7AAC9D63477777B2B140D0030B4EBAB6 /* NSString+CLString.m */,
-				5A62F9B56CFB2A054EC25266C0A4F28F /* UIColor+CLColor.h */,
-				05D0BDB996ED4123521C35721C6644F0 /* UIColor+CLColor.m */,
-				762B01533EDB13683A9E99051855C6FA /* UIDevice+CLDevice.h */,
-				C5370F4A390071D62B528C37FAE1016A /* UIDevice+CLDevice.m */,
-				B02F5F225D3026554DC759A826FE3C45 /* UIView+CLView.h */,
-				702DF7EEC33641970A456EB77547AB31 /* UIView+CLView.m */,
-				7DEE7283752A7722EE03AFC313AF7208 /* Pod */,
-				CBAD03A4DE946796BE2315E36335963B /* Support Files */,
-			);
-			name = CLTools;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0D6BDF5676CF32AF0DA5A0707D0931DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35ED8CB60D81B667A262C8A6DEE88346 /* CLFunctions.h in Headers */,
+				6F574CF729609F0E82FC015E24BADD11 /* CLTools-umbrella.h in Headers */,
+				ABB43F201374F20F6A68E32840D24447 /* CLTools.h in Headers */,
+				C243362A24C44D702D6B568D8B4F7F11 /* NSDictionary+CLDictionary.h in Headers */,
+				39F5D630C33D5EB1D1C4D505F0A81FBD /* NSString+CLString.h in Headers */,
+				208D7F1D8F6AD068B8FBDB2EA7D851F9 /* UIColor+CLColor.h in Headers */,
+				D9CC5F607FCD4547AEECD2665340083A /* UIDevice+CLDevice.h in Headers */,
+				024697520844A0B2175D9746699D5F3C /* UIImage+CLImage.h in Headers */,
+				F5FA2DF9F17989F6422E1CF12A5D0038 /* UIView+CLView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1363BADB940DC3E26B99B99D4849694E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1D28414EB6F4FBEF2FC15B2159601FA6 /* Pods-CLTools_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE03F941F14030316A184739174DB70D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02F81780A003A9E652A12F7560C497F1 /* CLTools-umbrella.h in Headers */,
-				3BC76CABBD1BB845D3825CCBB7C9514D /* CLTools.h in Headers */,
-				489717E4EA23BFBD337E7DE3D1875FE1 /* NSDictionary+CLDictionary.h in Headers */,
-				70921F93D2D5BAA88C5D98E804ADB65C /* NSObject+CLFunc.h in Headers */,
-				2C1CE5BFE323D6AF1A57F415CF3135E4 /* NSString+CLString.h in Headers */,
-				5D1671FAAEA88509641EBDD4AE14E5A1 /* UIColor+CLColor.h in Headers */,
-				F49F588934B7E3F80D249FED1D0DDC45 /* UIDevice+CLDevice.h in Headers */,
-				62A8A4D3C6BD5742944E11121DD77D02 /* UIView+CLView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,13 +340,13 @@
 			productReference = 9EF7ADCFCA1B783856B5DF2FFD4DD9AA /* Pods_CLTools_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C506A9FF22C4321436B79294D4BFB00D /* CLTools */ = {
+		349C649A7F528A5F787B8F4BA86B23EB /* CLTools */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4E854AF2C32CA6282661350A70D1638 /* Build configuration list for PBXNativeTarget "CLTools" */;
+			buildConfigurationList = 8724F05D43141FDAF93739C76774D2C6 /* Build configuration list for PBXNativeTarget "CLTools" */;
 			buildPhases = (
-				A20E31F703EBD2DDA8709086451A772C /* Sources */,
-				031742A03B5E9701ADD75B9434182CA7 /* Frameworks */,
-				CE03F941F14030316A184739174DB70D /* Headers */,
+				C7400E12B54975A2B9D9D958A1D8D16E /* Sources */,
+				A6EA7653BCB4335D8F9F7525B0CD7F68 /* Frameworks */,
+				0D6BDF5676CF32AF0DA5A0707D0931DF /* Headers */,
 			);
 			buildRules = (
 			);
@@ -374,7 +378,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C506A9FF22C4321436B79294D4BFB00D /* CLTools */,
+				349C649A7F528A5F787B8F4BA86B23EB /* CLTools */,
 				275567813B600B754B906376D4F8D544 /* Pods-CLTools_Example */,
 				2AD80938B484D7881F1313C451DE243B /* Pods-CLTools_Tests */,
 			);
@@ -390,17 +394,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A20E31F703EBD2DDA8709086451A772C /* Sources */ = {
+		C7400E12B54975A2B9D9D958A1D8D16E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B1F00D65F4AACFF8F704D5C82C5FCB /* CLTools-dummy.m in Sources */,
-				EB16E2DC948DAE77A96BB7D347325759 /* NSDictionary+CLDictionary.m in Sources */,
-				16422154544AFE8E627D154303095986 /* NSObject+CLFunc.m in Sources */,
-				CE3A8ADB5C9A7FB483374D38D6133F11 /* NSString+CLString.m in Sources */,
-				1CFD351CAC5A683FFB59514CED519332 /* UIColor+CLColor.m in Sources */,
-				07860FA8EA407F1885743CB65FA3642E /* UIDevice+CLDevice.m in Sources */,
-				E69C4AC1F8F3B081A8979E420B4D092B /* UIView+CLView.m in Sources */,
+				346F97959DA443DE666396C4EC667603 /* CLTools-dummy.m in Sources */,
+				C4DAD3FA25574A74A28C9262F545AD78 /* NSDictionary+CLDictionary.m in Sources */,
+				33B19E242798DDA804BAD0C5B6D68ACE /* NSString+CLString.m in Sources */,
+				170A1536F38656A452F29238A88D80A0 /* UIColor+CLColor.m in Sources */,
+				3D98B64BA1EF73147BDD8F57F2245DBB /* UIDevice+CLDevice.m in Sources */,
+				5981FDD651A0D3EAD439FE42C21A7C79 /* UIImage+CLImage.m in Sources */,
+				897633F6A056BAED059AEEFE50FB5D2B /* UIView+CLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +422,7 @@
 		568A2E71056B4F7FC2D662981E5B9E16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CLTools;
-			target = C506A9FF22C4321436B79294D4BFB00D /* CLTools */;
+			target = 349C649A7F528A5F787B8F4BA86B23EB /* CLTools */;
 			targetProxy = 052B4DB2E63253FA83F7F30C2AF55069 /* PBXContainerItemProxy */;
 		};
 		785A1F9A85ED74E84C410AC1335CFD8E /* PBXTargetDependency */ = {
@@ -493,6 +497,37 @@
 			};
 			name = Debug;
 		};
+		35EAFE7DDA295CEA94385DE15B0004BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C06DE71DC536DCE97CB665CB5663C65 /* CLTools.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CLTools/CLTools-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CLTools/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CLTools/CLTools.modulemap";
+				PRODUCT_MODULE_NAME = CLTools;
+				PRODUCT_NAME = CLTools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3F591DBD29534C8A1140C14066F77AA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4EC1524E297523135B03A9E89FEB9F2 /* Pods-CLTools_Tests.debug.xcconfig */;
@@ -559,40 +594,9 @@
 			};
 			name = Debug;
 		};
-		5119D54654F42DC97C7C55F467F85AF4 /* Release */ = {
+		58A1C2FAE89466DF4CD245392AA98DC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70B2F6BAABC3F7480CF6417D1A633ECA /* CLTools.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CLTools/CLTools-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CLTools/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CLTools/CLTools.modulemap";
-				PRODUCT_MODULE_NAME = CLTools;
-				PRODUCT_NAME = CLTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		81702003BDD95EABEB4D88E31CC34194 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70B2F6BAABC3F7480CF6417D1A633ECA /* CLTools.xcconfig */;
+			baseConfigurationReference = 3C06DE71DC536DCE97CB665CB5663C65 /* CLTools.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -767,11 +771,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4E854AF2C32CA6282661350A70D1638 /* Build configuration list for PBXNativeTarget "CLTools" */ = {
+		8724F05D43141FDAF93739C76774D2C6 /* Build configuration list for PBXNativeTarget "CLTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				81702003BDD95EABEB4D88E31CC34194 /* Debug */,
-				5119D54654F42DC97C7C55F467F85AF4 /* Release */,
+				58A1C2FAE89466DF4CD245392AA98DC6 /* Debug */,
+				35EAFE7DDA295CEA94385DE15B0004BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

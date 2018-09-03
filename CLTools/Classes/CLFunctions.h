@@ -1,8 +1,8 @@
 //
-//  NSObject+CLFunc.h
+//  CLFunctions.h
 //  CLTools
 //
-//  Created by ClaudeLi on 2018/8/23.
+//  Created by ClaudeLi on 2018/9/3.
 //
 
 #import <Foundation/Foundation.h>
@@ -219,7 +219,3 @@ static inline void OpenURL(NSString *URLString, void(^__nullable completionHandl
         }
     }
 }
-
-@interface NSObject (CLFunc)
-
-@end

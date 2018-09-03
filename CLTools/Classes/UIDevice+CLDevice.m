@@ -7,6 +7,7 @@
 //
 
 #import "UIDevice+CLDevice.h"
+#import "NSString+CLString.h"
 // IDFA
 #import <AdSupport/AdSupport.h>
 // MacAddress
@@ -224,6 +225,9 @@ NSString *UUIDKeychainKey(){
 }
 
 + (void)saveKeychainValue:(NSString *)sValue key:(NSString *)sKey{
+    if ([NSString isNilOrEmptyString:sKey]) {
+        return;
+    }
     NSMutableDictionary * keychainQuery = [self getKeychainQuery:sKey];
     SecItemDelete((__bridge_retained CFDictionaryRef)keychainQuery);
     
@@ -234,6 +238,9 @@ NSString *UUIDKeychainKey(){
 }
 
 + (NSString *)readKeychainValue:(NSString *)sKey{
+    if ([NSString isNilOrEmptyString:sKey]) {
+        return nil;
+    }
     NSString *ret = nil;
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:sKey];
     [keychainQuery setObject:(id)kCFBooleanTrue forKey:(__bridge_transfer id)kSecReturnData];
@@ -253,6 +260,9 @@ NSString *UUIDKeychainKey(){
 }
 
 + (void)deleteKeychainValue:(NSString *)sKey {
+    if ([NSString isNilOrEmptyString:sKey]) {
+        return;
+    }
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:sKey];
     SecItemDelete((__bridge CFDictionaryRef)keychainQuery);
 }
