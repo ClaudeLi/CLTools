@@ -11,10 +11,10 @@
 @interface NSDictionary (CLDictionary)
 
 // URL.query 转字典
-+ (NSDictionary *)dictionaryWithQueryString:(NSString *)string;
++ (nullable NSDictionary *)dictionaryWithQueryString:(nullable NSString *)string;
 
 // json字符串转字典
-+ (nullable NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
++ (nullable NSDictionary *)dictionaryWithJsonString:(nullable NSString *)jsonString;
 
 // 转json格式字符串
 + (nullable NSString*)toJsonString;

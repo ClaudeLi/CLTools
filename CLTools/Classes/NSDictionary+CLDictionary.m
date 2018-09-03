@@ -12,6 +12,9 @@
 @implementation NSDictionary (CLDictionary)
 
 + (NSDictionary *)dictionaryWithQueryString:(NSString *)string{
+    if ([NSString isNilOrEmptyString:string]) {
+        return nil;
+    }
     NSArray *subArray = [string componentsSeparatedByString:@"&"];
     NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithCapacity:4];
     for (int j = 0 ; j < subArray.count; j++){

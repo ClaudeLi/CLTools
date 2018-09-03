@@ -13,32 +13,32 @@
 /**
  *  判断字符串是否为空
  */
-+ (BOOL)isNilOrEmptyString:(NSString *)string;
++ (BOOL)isNilOrEmptyString:(nullable NSString *)string;
 
 /**
  *  object转json格式字符串
  */
-+ (nullable NSString*)jsonStringWithObject:(id)object;
++ (nullable NSString*)jsonStringWithObject:(nullable id)object;
 
 /**
  *  去除 " "、"\n"格式
  */
-+ (nullable NSString *)jsonStringDelFormatWithObject:(id)object;
++ (nullable NSString *)jsonStringDelFormatWithObject:(nullable id)object;
 
 /**
  *  js交互, 特殊字符处理 替换'->\\'
  */
-+ (nullable NSString *)jsonStringForJSWithObject:(id)object;
++ (nullable NSString *)jsonStringForJSWithObject:(nullable id)object;
 
 /**
  *  数组转字符串, connector: 连接符
  */
-+ (nullable NSString *)stringWithArray:(NSArray *)array connector:(NSString *)connector;
++ (nullable NSString *)stringWithArray:(nullable NSArray *)array connector:(nullable NSString *)connector;
 
 /**
  *  字符串转数组, separate: 分割符
  */
-- (nullable NSArray *)toArrayWithSeparate:(NSString *)separate;
+- (nullable NSArray *)toArrayWithSeparate:(nullable NSString *)separate;
 
 /**
  *  URLEncode

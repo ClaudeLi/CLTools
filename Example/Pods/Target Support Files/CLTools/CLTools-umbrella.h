@@ -10,12 +10,13 @@
 #endif
 #endif
 
+#import "CLFunctions.h"
 #import "CLTools.h"
 #import "NSDictionary+CLDictionary.h"
-#import "NSObject+CLFunc.h"
 #import "NSString+CLString.h"
 #import "UIColor+CLColor.h"
 #import "UIDevice+CLDevice.h"
+#import "UIImage+CLImage.h"
 #import "UIView+CLView.h"
 
 FOUNDATION_EXPORT double CLToolsVersionNumber;
