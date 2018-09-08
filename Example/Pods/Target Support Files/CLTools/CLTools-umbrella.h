@@ -14,6 +14,7 @@
 #import "CLTools.h"
 #import "NSDictionary+CLDictionary.h"
 #import "NSString+CLString.h"
+#import "UIButton+CLButton.h"
 #import "UIColor+CLColor.h"
 #import "UIDevice+CLDevice.h"
 #import "UIImage+CLImage.h"
