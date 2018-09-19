@@ -1,38 +1,12 @@
 //
-//  CLFunctions.h
+//  NSObject+CLFunc.h
 //  CLTools
 //
-//  Created by ClaudeLi on 2018/9/3.
+//  Created by ClaudeLi on 2018/9/19.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-#define KBounds         [UIScreen mainScreen].bounds
-#define KScreenWidth    [UIScreen mainScreen].bounds.size.width
-#define KScreenHeight   [UIScreen mainScreen].bounds.size.height
-
-/**
- 视图安全区
-
- @param view 指定视图
- @return UIEdgeInsets
- */
-static inline UIEdgeInsets cl_safeAreaInset(UIView *view) {
-    if (@available(iOS 11.0, *)) {
-        return view.safeAreaInsets;
-    }
-    return UIEdgeInsetsZero;
-}
-
-/**
- 屏幕安全区
- 
- @return UIEdgeInsets
- */
-static inline UIEdgeInsets KSafeInsets(void) {
-    return cl_safeAreaInset(UIApplication.sharedApplication.keyWindow);
-}
 
 /**
  Synthsize a weak or strong reference.
@@ -69,6 +43,36 @@ static inline UIEdgeInsets KSafeInsets(void) {
 #define strongly(objc, strongObjc) try{} @finally{} __strong __typeof__(objc) strongObjc = objc;
 #endif
 #endif
+
+
+#define KBounds         [UIScreen mainScreen].bounds
+#define KScreenWidth    [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight   [UIScreen mainScreen].bounds.size.height
+
+/**
+ 视图安全区
+ 
+ @param view 指定视图
+ @return UIEdgeInsets
+ */
+static inline UIEdgeInsets cl_safeAreaInset(UIView *view) {
+    if (@available(iOS 11.0, *)) {
+        return view.safeAreaInsets;
+    }
+    return UIEdgeInsetsZero;
+}
+
+/**
+ 屏幕安全区
+ 
+ @return UIEdgeInsets
+ */
+static inline UIEdgeInsets KSafeInsets(void) {
+    return cl_safeAreaInset(UIApplication.sharedApplication.keyWindow);
+}
+
+#pragma mark -
+#pragma mark -- NSPath --
 
 /**
  目录路径
@@ -241,3 +245,7 @@ static inline void OpenURL(NSString *URLString, void(^__nullable completionHandl
         }
     }
 }
+
+@interface NSObject (CLFunc)
+
+@end
