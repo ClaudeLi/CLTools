@@ -1,5 +1,5 @@
 PODS:
-  - CLTools (1.0.5)
+  - CLTools (1.0.6)
 
 DEPENDENCIES:
   - CLTools (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CLTools: 1676345bc3b1585b9a8a40903b56cbfdda2f8528
+  CLTools: 92ca06b98ce6017dd8d243097e3c3325fdd6a70e
 
 PODFILE CHECKSUM: ba27b0f81e60870b8838ac1607bb1011f0c750e6
 
