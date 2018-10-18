@@ -63,8 +63,8 @@
 #define KTabBarHeight       49
 #define KTabBarMaxHeight    (ISIPhoneX?83:49)
 
-#define KSafeTop            (ISIPHONEX?44.0f:0)
-#define KSafeBottom         (ISIPHONEX?34.0f:0)
+#define KSafeTop            (ISIPhoneX?44.0f:0)
+#define KSafeBottom         (ISIPhoneX?34.0f:0)
 
 /**
  视图安全区
