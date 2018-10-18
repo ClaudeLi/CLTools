@@ -49,6 +49,14 @@
 #define KScreenWidth    [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight   [UIScreen mainScreen].bounds.size.height
 
+#define ISIPAD          (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define ISIPHONE        (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+#define ISIPHONEX       ((ISIPHONE && (MAX(KScreenWidth, KScreenHeight)/MIN(KScreenWidth, KScreenHeight)>2.0))?YES:NO)
+
+#define KSafeTop        (ISIPHONEX?44.0f:0)
+#define KSafeBottom     (ISIPHONEX?34.0f:0)
+
 /**
  视图安全区
  
