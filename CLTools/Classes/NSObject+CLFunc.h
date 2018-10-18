@@ -49,13 +49,22 @@
 #define KScreenWidth    [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight   [UIScreen mainScreen].bounds.size.height
 
-#define ISIPAD          (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define ISIPHONE        (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPAD         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE       (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 
-#define ISIPHONEX       ((ISIPHONE && (MAX(KScreenWidth, KScreenHeight)/MIN(KScreenWidth, KScreenHeight)>2.0))?YES:NO)
+#define ISIPhoneX       ((IS_IPHONE && (MAX(KScreenWidth, KScreenHeight)/MIN(KScreenWidth, KScreenHeight)>2.0))?YES:NO)
+// 状态栏
+#define KStateHeight        (ISIPhoneX?44:20)
+// 导航栏
+#define KNavigationHeight   (ISIPhoneX?88:64)
+// 标题高度
+#define KTitleHeight        (KNavigationHeight-KStateHeight)
+// tabBar高度
+#define KTabBarHeight       49
+#define KTabBarMaxHeight    (ISIPhoneX?83:49)
 
-#define KSafeTop        (ISIPHONEX?44.0f:0)
-#define KSafeBottom     (ISIPHONEX?34.0f:0)
+#define KSafeTop            (ISIPHONEX?44.0f:0)
+#define KSafeBottom         (ISIPHONEX?34.0f:0)
 
 /**
  视图安全区
@@ -133,7 +142,6 @@ static inline NSString *NSCachesDirPath(void){
     });
     return caches;
 }
-
 
 /**
  删除文件
