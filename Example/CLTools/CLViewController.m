@@ -19,13 +19,16 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor randomColor];
+    @cl_weakify(self.view, weak_obj)
+    weak_obj.backgroundColor = [UIColor blueColor];
+    
     UUIDKeychainKey();
     NSLog(@"%@", UUIDKeychainKey());
     NSLog(@"%@", NSDocumentDirPath());
     NSRemoveFilesAtDirectory(NSTemporaryDirectory(), @"mp4");
-    OpenURL(@"weixin://", ^(BOOL success) {
+    OpenURL([NSURL URLWithString:@"weixin://"], ^(BOOL success) {
         
-    });    
+    });
 }
 
 - (void)didReceiveMemoryWarning

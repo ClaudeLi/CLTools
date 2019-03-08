@@ -10,9 +10,9 @@
 #endif
 #endif
 
+#import "CLStaticFunction.h"
 #import "CLTools.h"
 #import "NSDictionary+CLDictionary.h"
-#import "NSObject+CLFunc.h"
 #import "NSString+CLString.h"
 #import "UIButton+CLButton.h"
 #import "UIColor+CLColor.h"
