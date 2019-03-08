@@ -275,7 +275,6 @@ static inline void OpenURL(NSURL *__nullable URL, void(^__nullable completionHan
  
  @param URLStr URLStr
  @param completionHandler completionHandler description
- @return return value description
  */
 static inline void OpenURLStr(NSString *__nullable URLStr, void(^__nullable completionHandler)(BOOL success))
 {
