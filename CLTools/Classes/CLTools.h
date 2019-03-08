@@ -12,9 +12,10 @@
 FOUNDATION_EXPORT double CLToolsVersionNumber;
 FOUNDATION_EXPORT const unsigned char CLToolsVersionString[];
 
+#import <CLTools/CLStaticFunction.h>
+
 #import <CLTools/NSDictionary+CLDictionary.h>
 #import <CLTools/NSString+CLString.h>
-#import <CLTools/NSObject+CLFunc.h>
 
 #import <CLTools/UIColor+CLColor.h>
 #import <CLTools/UIView+CLView.h>
@@ -24,9 +25,10 @@ FOUNDATION_EXPORT const unsigned char CLToolsVersionString[];
 
 #else
 
+#import "CLStaticFunction.h"
+
 #import "NSDictionary+CLDictionary.h"
 #import "NSString+CLString.h"
-#import "NSObject+CLFunc.h"
 
 #import "UIColor+CLColor.h"
 #import "UIView+CLView.h"

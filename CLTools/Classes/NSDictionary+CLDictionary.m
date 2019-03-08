@@ -47,20 +47,4 @@
     return dic;
 }
 
-// 转json格式字符串
-+ (NSString*)toJsonString{
-    return [NSString jsonStringWithObject:self];
-}
-
-// 转json格式字符串, 去除格式化
-+ (NSString *)toJsonStringDelFormat{
-    return [NSString jsonStringDelFormatWithObject:self];
-}
-
-// 转json格式字符串, 处理"'"
-+ (NSString *)toJSJsonString{
-    return [NSString jsonStringForJSWithObject:self];
-}
-
-
 @end

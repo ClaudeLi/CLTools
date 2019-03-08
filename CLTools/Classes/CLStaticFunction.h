@@ -1,9 +1,12 @@
 //
-//  NSObject+CLFunc.h
+//  CLStaticFunction.h
 //  CLTools
 //
-//  Created by ClaudeLi on 2018/9/19.
+//  Created by ClaudeLi on 2019/3/6.
 //
+
+#ifndef CLStaticFunction_h
+#define CLStaticFunction_h
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -12,59 +15,60 @@
  Synthsize a weak or strong reference.
  
  Example:
- @weakly(self, weakSelf)
- [self doSomething^{
- @strongly(self, strongSelf)
- if (!self) return;
+ @cl_weakify(self.view, weakView)
+ [weakView doSomething^{
+ @cl_strongify(self.view, strongView)
+ if (!strongView) return;
  ...
  }];
  
  */
-#ifndef weakly
+#ifndef cl_weakify
 #if DEBUG
 #if __has_feature(objc_arc)
-#define weakly(objc, weakObjc) autoreleasepool{} __weak __typeof__(objc) weakObjc = objc;
+#define cl_weakify(objc, weakObjc) autoreleasepool{} __weak __typeof__(objc) weakObjc = objc;
 #else
-#define weakly(objc, weakObjc) autoreleasepool{} __block __typeof__(objc) weakObjc = objc;
+#define cl_weakify(objc, weakObjc) autoreleasepool{} __block __typeof__(objc) weakObjc = objc;
 #endif
 #else
 #if __has_feature(objc_arc)
-#define weakly(objc, weakObjc) try{} @finally{} {} __weak __typeof__(objc) weakObjc = objc;
+#define cl_weakify(objc, weakObjc) try{} @finally{} {} __weak __typeof__(objc) weakObjc = objc;
 #else
-#define weakly(objc, weakObjc) try{} @finally{} {} __block __typeof__(objc) weakObjc = objc;
+#define cl_weakify(objc, weakObjc) try{} @finally{} {} __block __typeof__(objc) weakObjc = objc;
 #endif
 #endif
 #endif
 
-#ifndef strongly
+#ifndef cl_strongify
 #if DEBUG
-#define strongly(objc, strongObjc) autoreleasepool{} __strong __typeof__(objc) strongObjc = objc;
+#define cl_strongify(objc, strongObjc) autoreleasepool{} __strong __typeof__(objc) strongObjc = objc;
 #else
-#define strongly(objc, strongObjc) try{} @finally{} __strong __typeof__(objc) strongObjc = objc;
+#define cl_strongify(objc, strongObjc) try{} @finally{} __strong __typeof__(objc) strongObjc = objc;
 #endif
 #endif
 
 
-#define KBounds         [UIScreen mainScreen].bounds
-#define KScreenWidth    [UIScreen mainScreen].bounds.size.width
-#define KScreenHeight   [UIScreen mainScreen].bounds.size.height
+#define cl_kBounds         [UIScreen mainScreen].bounds
+#define cl_kScreenWidth    [UIScreen mainScreen].bounds.size.width
+#define cl_kScreenHeight   [UIScreen mainScreen].bounds.size.height
 
-#define IS_IPAD         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define IS_IPHONE       (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define cl_isPad           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define cl_isPhone         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 
-#define ISIPhoneX       ((IS_IPHONE && (MAX(KScreenWidth, KScreenHeight)/MIN(KScreenWidth, KScreenHeight)>2.0))?YES:NO)
+#define cl_isIPhoneX       ((cl_is_iPhone && (MAX(cl_kScreenWidth, cl_kScreenHeight)/MIN(cl_kScreenWidth, cl_kScreenHeight) > 2.0))?YES:NO)
 // 状态栏
-#define KStateHeight        (ISIPhoneX?44:20)
+#define cl_kStateHeight        (cl_isIPhoneX?44:20)
 // 导航栏
-#define KNavigationHeight   (ISIPhoneX?88:64)
+#define cl_kNavigationHeight   (cl_isIPhoneX?88:64)
 // 标题高度
-#define KTitleHeight        (KNavigationHeight-KStateHeight)
-// tabBar高度
-#define KTabBarHeight       49
-#define KTabBarMaxHeight    (ISIPhoneX?83:49)
+#define cl_kTitleHeight        (cl_kNavigationHeight-cl_kStateHeight)
 
-#define KSafeTop            (ISIPhoneX?44.0f:0)
-#define KSafeBottom         (ISIPhoneX?34.0f:0)
+#define cl_kSafeAreaTop        (cl_isIPhoneX?44.0f:0)
+#define cl_kSafeAreaBottom     (cl_isIPhoneX?34.0f:0)
+
+// tabBar高度
+#define cl_kTabBarItemHeight    49
+#define cl_kTabBarHeight        (cl_kSafePortraitBottom+cl_kTabBarItemHeight)
 
 /**
  视图安全区
@@ -84,7 +88,7 @@ static inline UIEdgeInsets cl_safeAreaInset(UIView *view) {
  
  @return UIEdgeInsets
  */
-static inline UIEdgeInsets KSafeInsets(void) {
+static inline UIEdgeInsets cl_kSafeAreaInset(void) {
     return cl_safeAreaInset(UIApplication.sharedApplication.keyWindow);
 }
 
@@ -224,24 +228,28 @@ static inline long long GetFolderSizeAtPath(NSString *folderPath)
     NSEnumerator *childFilesEnumerator = [[fm subpathsAtPath:folderPath] objectEnumerator];
     NSString* fileName;
     long long folderSize = 0;
-    while ((fileName = [childFilesEnumerator nextObject]) != nil){
+    while ((fileName = [childFilesEnumerator nextObject]) != nil) {
         NSString* fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];
         folderSize += GetFileSizeAtPath(fileAbsolutePath);
     }
     return folderSize;
 }
 
-
 /**
  OpenURL
  
- @param URLString URLString
+ @param URL URL
  @param completionHandler completionHandler
  */
-static inline void OpenURL(NSString *URLString, void(^__nullable completionHandler)(BOOL success))
+static inline void OpenURL(NSURL *__nullable URL, void(^__nullable completionHandler)(BOOL success))
 {
+    if (!URL) {
+        if (completionHandler) {
+            completionHandler(NO);
+        }
+        return;
+    }
     UIApplication *application = [UIApplication sharedApplication];
-    NSURL *URL = [NSURL URLWithString:URLString];
     if (@available(iOS 10.0, *)) {
         [application openURL:URL options:@{}
            completionHandler:completionHandler];
@@ -262,6 +270,22 @@ static inline void OpenURL(NSString *URLString, void(^__nullable completionHandl
     }
 }
 
-@interface NSObject (CLFunc)
+/**
+ OpenURLStr
+ 
+ @param URLStr URLStr
+ @param completionHandler completionHandler description
+ @return return value description
+ */
+static inline void OpenURLStr(NSString *__nullable URLStr, void(^__nullable completionHandler)(BOOL success))
+{
+    if (!URLStr) {
+        if (completionHandler) {
+            completionHandler(NO);
+        }
+        return;
+    }
+    OpenURL([NSURL URLWithString:URLStr], completionHandler);
+}
 
-@end
+#endif /* CLStaticFunction_h */

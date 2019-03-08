@@ -21,11 +21,6 @@
 + (nullable NSString*)jsonStringWithObject:(nullable id)object;
 
 /**
- *  去除 " "、"\n"格式
- */
-+ (nullable NSString *)jsonStringDelFormatWithObject:(nullable id)object;
-
-/**
  *  js交互, 特殊字符处理 替换'->\\'
  */
 + (nullable NSString *)jsonStringForJSWithObject:(nullable id)object;
