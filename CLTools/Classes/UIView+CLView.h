@@ -10,6 +10,6 @@
 
 @interface UIView (CLView)
 
-- (UIViewController *)viewController;
+- (UIViewController *)cl_viewController;
 
 @end

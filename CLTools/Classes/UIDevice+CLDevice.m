@@ -18,7 +18,7 @@
 #include <net/if_dl.h>
 #import <Photos/Photos.h>
 
-NSString *UUIDKeychainKey(){
+NSString *UUIDKeychainKey() {
     static NSString *uuidKey;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -29,7 +29,7 @@ NSString *UUIDKeychainKey(){
 
 @implementation UIDevice (CLDevice)
 
-+ (NSString *)appVersion{
++ (NSString *)appVersion {
     static NSString *appCurVersion;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -39,7 +39,7 @@ NSString *UUIDKeychainKey(){
     return appCurVersion;
 }
 
-+ (NSString *)appName{
++ (NSString *)appName {
     static NSString *appCurName;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -49,7 +49,7 @@ NSString *UUIDKeychainKey(){
     return appCurName;
 }
 
-+ (NSString *)uuid{
++ (NSString *)uuid {
     static NSString *uuidStr;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -62,7 +62,7 @@ NSString *UUIDKeychainKey(){
     return uuidStr;
 }
 
-+ (NSString *)idfv{
++ (NSString *)idfv {
     static NSString *idfvStr;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -72,7 +72,7 @@ NSString *UUIDKeychainKey(){
     return idfvStr;
 }
 
-+ (NSString *)idfa{
++ (NSString *)idfa {
     static NSString *idfaStr;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -81,7 +81,7 @@ NSString *UUIDKeychainKey(){
     return idfaStr;
 }
 
-+ (NSString *)macAddress{
++ (NSString *)macAddress {
     NSArray *ifs = CFBridgingRelease(CNCopySupportedInterfaces());
     id info = nil;
     for (NSString *ifnam in ifs) {
@@ -95,7 +95,7 @@ NSString *UUIDKeychainKey(){
     return bssid;
 }
 
-+ (NSString *)deviceModel{
++ (NSString *)deviceModel {
     static NSString *platform = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -114,7 +114,7 @@ NSString *UUIDKeychainKey(){
     return platform;
 }
 
-+ (NSString *)deviceModelName{
++ (NSString *)deviceModelName {
     static dispatch_once_t one;
     static NSString *name;
     dispatch_once(&one, ^{
@@ -241,7 +241,7 @@ NSString *UUIDKeychainKey(){
 #pragma mark -
 #pragma mark -- 钥匙串操作 --
 // Keychain
-+ (NSMutableDictionary *)getKeychainQuery:(NSString *)service{
++ (NSMutableDictionary *)getKeychainQuery:(NSString *)service {
     return [NSMutableDictionary dictionaryWithObjectsAndKeys:
             (__bridge_transfer id)kSecClassGenericPassword,
             (__bridge_transfer id)kSecClass,service,
@@ -252,7 +252,7 @@ NSString *UUIDKeychainKey(){
             nil];
 }
 
-+ (void)saveKeychainValue:(NSString *)sValue key:(NSString *)sKey{
++ (void)saveKeychainValue:(NSString *)sValue key:(NSString *)sKey {
     if ([NSString isNilOrEmptyString:sKey]) {
         return;
     }
@@ -262,10 +262,9 @@ NSString *UUIDKeychainKey(){
     [keychainQuery setObject:[NSKeyedArchiver archivedDataWithRootObject:sValue] forKey:(__bridge_transfer id)kSecValueData];
     
     SecItemAdd((__bridge_retained CFDictionaryRef)keychainQuery, NULL);
-    
 }
 
-+ (NSString *)readKeychainValue:(NSString *)sKey{
++ (NSString *)readKeychainValue:(NSString *)sKey {
     if ([NSString isNilOrEmptyString:sKey]) {
         return nil;
     }
@@ -412,7 +411,7 @@ NSString *UUIDKeychainKey(){
     [invocation invoke];
 }
 
-+ (BOOL)isLandscape{
++ (BOOL)isLandscape {
     //if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
     if (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)) {
         return YES;

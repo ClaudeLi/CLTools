@@ -11,6 +11,13 @@
 @interface NSString (CLString)
 
 /**
+ 判断字符串是否为空
+
+ @return BOOL
+ */
+- (BOOL)isNilOrEmpty;
+
+/**
  *  判断字符串是否为空
  */
 + (BOOL)isNilOrEmptyString:(nullable NSString *)string;

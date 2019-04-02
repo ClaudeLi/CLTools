@@ -10,8 +10,16 @@
 
 @implementation NSString (CLString)
 
-+ (BOOL)isNilOrEmptyString:(NSString *)string{
-    if(string==nil||string==NULL||[string isEqual:@"null"]||[string isEqual:[NSNull null]]||[string isKindOfClass:[NSNull class]]){
+- (BOOL)isNilOrEmpty {
+    return [NSString isNilOrEmptyString:self];
+}
+
++ (BOOL)isNilOrEmptyString:(NSString *)string {
+    if (string == nil ||
+        string == NULL ||
+        [string isEqual:@"null"] ||
+        [string isEqual:[NSNull null]] ||
+        [string isKindOfClass:[NSNull class]]) {
         return YES;
     }
     if (![string isKindOfClass:[NSString class]]) {
@@ -33,7 +41,7 @@
 }
 
 // 字典转json格式字符串
-+ (NSString*)jsonStringWithObject:(id)object{
++ (NSString*)jsonStringWithObject:(id)object {
     if ([object isKindOfClass:[NSString class]]) {
         return (NSString *)object;
     } else if ([object isKindOfClass:[NSData class]]) {
@@ -51,7 +59,7 @@
 }
 
 // js交互 \\'
-+ (NSString *)jsonStringForJSWithObject:(id)object{
++ (NSString *)jsonStringForJSWithObject:(id)object {
     NSString *jsonString = [self jsonStringWithObject:object];
     if (!jsonString.length) {
         return @"";
@@ -65,14 +73,14 @@
 /**
  *  数组转字符串, connector: 连接符
  */
-+ (NSString *)stringWithArray:(NSArray *)array connector:(NSString *)connector{
++ (NSString *)stringWithArray:(NSArray *)array connector:(NSString *)connector {
     return [array componentsJoinedByString:connector];
 }
 
 /**
  *  字符串转数组, separate: 分割符
  */
-- (NSArray *)toArrayWithSeparate:(NSString *)separate{
+- (NSArray *)toArrayWithSeparate:(NSString *)separate {
     return [self componentsSeparatedByString:separate];
 }
 

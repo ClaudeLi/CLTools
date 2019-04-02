@@ -76,9 +76,11 @@
  @param view 指定视图
  @return UIEdgeInsets
  */
-static inline UIEdgeInsets cl_safeAreaInset(UIView *view) {
-    if (@available(iOS 11.0, *)) {
-        return view.safeAreaInsets;
+static inline UIEdgeInsets cl_safeAreaInset(UIView * _Nullable view) {
+    if (view) {
+        if (@available(iOS 11.0, *)) {
+            return view.safeAreaInsets;
+        }
     }
     return UIEdgeInsetsZero;
 }
@@ -101,7 +103,7 @@ static inline UIEdgeInsets cl_kSafeAreaInset(void) {
  @param dir 目录
  @return path string
  */
-static inline NSString *NSPathAtDir(NSSearchPathDirectory dir){
+static inline NSString * _Nonnull NSPathAtDir(NSSearchPathDirectory dir) {
     return [NSSearchPathForDirectoriesInDomains(dir, NSUserDomainMask, YES) firstObject];
 }
 
@@ -110,7 +112,7 @@ static inline NSString *NSPathAtDir(NSSearchPathDirectory dir){
  
  @return path string
  */
-static inline NSString *NSDocumentDirPath(void){
+static inline NSString * _Nonnull NSDocumentDirPath(void) {
     static NSString *document;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -124,7 +126,7 @@ static inline NSString *NSDocumentDirPath(void){
  
  @return path string
  */
-static inline NSString *NSLibraryDirPath(void){
+static inline NSString * _Nonnull NSLibraryDirPath(void) {
     static NSString *library;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -138,7 +140,7 @@ static inline NSString *NSLibraryDirPath(void){
  
  @return path string
  */
-static inline NSString *NSCachesDirPath(void){
+static inline NSString * _Nonnull NSCachesDirPath(void) {
     static NSString *caches;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -153,7 +155,7 @@ static inline NSString *NSCachesDirPath(void){
  @param path 文件路径
  @return BOOL 是否删除成功
  */
-static inline BOOL NSRemoveFileAtPath(NSString *path){
+static inline BOOL NSRemoveFileAtPath(NSString * _Nullable path) {
     NSFileManager *fm = [NSFileManager defaultManager];
     if ([fm fileExistsAtPath:path]) {
         NSError *err;
@@ -172,8 +174,8 @@ static inline BOOL NSRemoveFileAtPath(NSString *path){
  @param URL 文件地址
  @return BOOL 是否删除成功
  */
-static inline BOOL NSRemoveFileAtURL(NSURL *URL){
-    if ([URL isKindOfClass:[NSURL class]]) {
+static inline BOOL NSRemoveFileAtURL(NSURL * _Nullable URL) {
+    if (URL && [URL isKindOfClass:[NSURL class]]) {
         return NSRemoveFileAtPath(URL.path);
     }
     return NO;
@@ -186,7 +188,7 @@ static inline BOOL NSRemoveFileAtURL(NSURL *URL){
  @param directory 目录
  @param suffixName 后缀
  */
-static inline void NSRemoveFilesAtDirectory(NSString *directory, NSString *suffixName)
+static inline void NSRemoveFilesAtDirectory(NSString * _Nullable directory, NSString * _Nullable suffixName)
 {
     NSDirectoryEnumerator *dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:directory];
     NSString *toDelFile;
@@ -206,7 +208,7 @@ static inline void NSRemoveFilesAtDirectory(NSString *directory, NSString *suffi
  @param filePath 文件路径
  @return long long
  */
-static inline long long GetFileSizeAtPath(NSString *filePath)
+static inline long long GetFileSizeAtPath(NSString * _Nullable filePath)
 {
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]){
         return [[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil] fileSize];
@@ -221,7 +223,7 @@ static inline long long GetFileSizeAtPath(NSString *filePath)
  @param folderPath 路径
  @return long long
  */
-static inline long long GetFolderSizeAtPath(NSString *folderPath)
+static inline long long GetFolderSizeAtPath(NSString * _Nullable folderPath)
 {
     NSFileManager* fm = [NSFileManager defaultManager];
     if (![fm fileExistsAtPath:folderPath]) return 0;
@@ -253,7 +255,7 @@ static inline void OpenURL(NSURL *__nullable URL, void(^__nullable completionHan
     if (@available(iOS 10.0, *)) {
         [application openURL:URL options:@{}
            completionHandler:completionHandler];
-    }else{
+    } else {
         if ([application canOpenURL:URL]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -262,7 +264,7 @@ static inline void OpenURL(NSURL *__nullable URL, void(^__nullable completionHan
             if (completionHandler) {
                 completionHandler(YES);
             }
-        }else{
+        } else {
             if (completionHandler) {
                 completionHandler(NO);
             }

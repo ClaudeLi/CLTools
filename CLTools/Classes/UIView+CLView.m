@@ -10,7 +10,7 @@
 
 @implementation UIView (CLView)
 
-- (UIViewController *)viewController {
+- (UIViewController *)cl_viewController {
     for (UIView *view = self; view; view = view.superview) {
         UIResponder *nextResponder = [view nextResponder];
         if ([nextResponder isKindOfClass:[UIViewController class]]) {
